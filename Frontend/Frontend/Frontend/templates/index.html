@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Dermatosis Classifier</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+    body {
+      background: linear-gradient(to left top, grey, rgb(98, 94, 94)) fixed;
+      text-align: center;
+      margin-top: 250px;
+    }
+    h1 {
+      text-align: center;
+      color: aliceblue;
+    }
+    h2 {
+      text-align: center;
+      color: aliceblue;
+    }
+    li {
+      text-align: center;
+      color: aliceblue;
+    }
+   
+    form {
+        display: inline-block;
+    }
+    script{
+      color: aliceblue;
+    }
+    span{
+      color: aliceblue;
+    }
+    </style>
+
+  </head>
+  <body>
+    <h1>Dermatosis Classifier</h1>
+
+    <h2> By clicking the above below you agree to the terms and conditions of this application as follows: <br/> This is not a real diagnosis. If you are concerned about any
+      forms of Dermatosis please consult your Dermatologist. You accept we are not held liable for any wrong or correct predictions</h2>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/png, image/gif, image/jpeg" >
+      <input type="submit" value="Predict"> {% if label %} {{ label }} {% endif %}
+   </form>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   
+   <span>
+     <u>Melanocytic nevi</u> -                  
+    Usually noncancerous, these type of lesions ard commonly called birth marks or moles. Can rarely become cancerous,
+    consult your doctor if new or growing
+    <br/><br/><br/>
+    <u>Melanoma</u> -                         
+    Skin cancer, these types of lesions grow very quickly. Please consult your doctor.
+    <br/><br/><br/>
+    <u>Benign keratosis-like lesions</u> -   
+    Noncancerous, these skin lesions develop as people age. Very common.
+    <br/><br/><br/>
+    <u>Basal cell carcinoma</u> -           
+    Cancerous, the skin lesions often develop on areas exposed by the sun. Generally not harmful, but consult
+    your doctor.
+    <br/><br/><br/>
+    <u>Actinic keratoses</u> -
+    Usually noncancerous, these types of skin lesiosn occur normally due to old age and sun exposure. Due to risk of 
+    becoming cancerous, consult your doctor.  
+    <br/><br/><br/>
+    <u>Vascular lesions</u> -         
+    Rarely cancerous, these lesions are very common and are normally referred to as birthmarks. Consult your doctor
+    if growth occurs.
+    <br/>
+    <br/><br/><br/>
+    <u>Dermatofibroma</u> - 
+    Noncancerous, these generally occur in women and are harmless. Consult your doctor if concerned.     
+  </span>
+
+
+  </body>
+</html>
